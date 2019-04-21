@@ -1,5 +1,16 @@
-$border: 2px solid red;
 $secondary: rgb(63,81,181);
+$buttonColor: rgb(255,87,34);
+
+@mixin background($image){
+    background-image: url($image);
+    background-size: cover;
+    background-position: center;
+}
+@mixin textStyle($lineHeight, $color){
+    line-height: $lineHeight;
+    color: $color;
+}
+
 html{
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -8,7 +19,6 @@ html{
 .navbar {
     padding:10px 0;
     background: transparent;
-    color:white;
     img{
         height: 50px;
     }
@@ -25,10 +35,7 @@ html{
 }
 
 #home{
-    background-image: url("~assets/images/banner.jpeg");
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    @include background("~assets/images/banner.jpeg");
     color: white;
     .hero-body{
         padding-left:0;
@@ -38,18 +45,22 @@ html{
         align-items: center;
         height: auto;        
         button{
-            background-color: rgb(255,87,34);
-            outline: none;
+            background-color: $buttonColor;
             width: 50%;
             border: none;
         }
     }
+    .subtitle{
+        line-height: 20px;
+        font-size: 1em;
+        font-weight: bold;
+    }
 }
 
 #aboutUs{
-    color:black;
     .columns{
-        line-height: 20px;
+        @include textStyle(20px, black);
+
     }
     .founder{
         text-align: center;
@@ -69,12 +80,10 @@ html{
     justify-content: center;
     align-items: center;
     .filter{
+        @include background("~assets/images/quote.jpeg");
         width: 100%;
         height: 65vh;
         filter: brightness(50%);
-        background-image: url("~assets/images/quote.jpeg");
-        background-size: cover;
-        background-position: center;
         position: absolute;
     }
     img{
@@ -85,15 +94,13 @@ html{
 
 #howItWorks{
     height: auto;
-    color: black;
     background-image: url("~assets/images/howitworks.jpeg");
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
-    line-height: 30px;
     .column{
         li{
-            line-height: 20px;
+            @include textStyle(20px, black);
             padding-bottom: 18px;
         }
     }
@@ -103,21 +110,19 @@ html{
 }
 
 #contactUs{
+    @include textStyle(30px,white );
     font-weight: bold;
     text-align: center;
-    color: white;
-    background-color: rgb(63,81,181);
-    line-height: 30px;
+    background-color: $secondary;
     i{
         padding-right: 5px;
     }
 }
 
 #footer{
+    @include textStyle(30px,black );
     padding: 35px;
-    line-height: 30px;
     text-align: center;
-    color: black;
     .fab, a{
         color: black;
     }

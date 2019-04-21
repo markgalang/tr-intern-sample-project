@@ -5,8 +5,7 @@ html {
 
 .navbar {
   padding: 10px 0;
-  background: transparent;
-  color: white; }
+  background: transparent; }
   .navbar img {
     height: 50px; }
   .navbar p {
@@ -21,7 +20,6 @@ html {
   background-image: url("~assets/images/banner.jpeg");
   background-size: cover;
   background-position: center;
-  height: 80vh;
   color: white; }
   #home .hero-body {
     padding-left: 0; }
@@ -33,20 +31,23 @@ html {
     height: auto; }
     #home .column button {
       background-color: #ff5722;
-      outline: none;
       width: 50%;
       border: none; }
+  #home .subtitle {
+    line-height: 20px;
+    font-size: 1em;
+    font-weight: bold; }
 
-#aboutUs {
+#aboutUs .columns {
+  line-height: 20px;
   color: black; }
-  #aboutUs .columns {
-    line-height: 20px; }
-  #aboutUs .founder {
-    text-align: center; }
-    #aboutUs .founder img {
-      margin-top: 10%;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%); }
+
+#aboutUs .founder {
+  text-align: center; }
+  #aboutUs .founder img {
+    margin-top: 10%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
 
 #conv {
   height: 65vh;
@@ -63,44 +64,43 @@ html {
   -ms-flex-align: center;
   align-items: center; }
   #conv .filter {
+    background-image: url("~assets/images/quote.jpeg");
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 65vh;
     -webkit-filter: brightness(50%);
     filter: brightness(50%);
-    background-image: url("~assets/images/quote.jpeg");
-    background-size: cover;
-    background-position: center;
     position: absolute; }
   #conv img {
     height: 100px; }
 
 #howItWorks {
   height: auto;
-  color: black;
   background-image: url("~assets/images/howitworks.jpeg");
   background-size: contain;
   background-position: left;
-  background-repeat: no-repeat;
-  line-height: 30px; }
+  background-repeat: no-repeat; }
   #howItWorks .column li {
     line-height: 20px;
+    color: black;
     padding-bottom: 18px; }
   #howItWorks .far {
     color: #3f51b5; }
 
 #contactUs {
+  line-height: 30px;
+  color: white;
   font-weight: bold;
   text-align: center;
-  color: white;
-  background-color: #3f51b5;
-  line-height: 30px; }
+  background-color: #3f51b5; }
   #contactUs i {
     padding-right: 5px; }
 
 #footer {
-  padding: 35px;
   line-height: 30px;
-  text-align: center;
-  color: black; }
+  color: black;
+  padding: 35px;
+  text-align: center; }
   #footer .fab, #footer a {
     color: black; }
